@@ -9,13 +9,8 @@ public class Main {
     static void main(String[] args) {
 
         IO.println("Demonstrating Exercise 1:\n");
-        List<String> originalList = new ArrayList<>();
-        originalList.add("Rotulador");
-        originalList.add("Tungsteno");
-        originalList.add("Zarzaparrilla");
-        originalList.add("Transfuncionador del continuo");
-        originalList.add("Ni cintieni la i");
-        originalList.add("Tonto");
+        List<String> originalList = new ArrayList<>(Arrays.asList("Rotulador","Tungsteno","Zarzaparrila",
+                "Transfuncionador del continuo", "Ni cintieni la i","Tonto"));
 
         IO.println("Printing original List.");
         originalList.forEach(IO::println);
