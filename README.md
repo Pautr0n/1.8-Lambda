@@ -1,5 +1,5 @@
 # Exercise Description:
-Exercises based in Java Utils.
+Exercises to implement Lambda Expressions
 
 # Technologies Used
 JDK25 IntelliJ IDE Git + GitHub + maven
