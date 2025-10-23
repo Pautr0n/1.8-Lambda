@@ -5,13 +5,13 @@ import java.util.stream.Collectors;
 
 class MethodsWithLambdaLvl2 {
 
-    public static List<String> filterStringsStartsAwithLength3 (List<String> list){
-        return list.stream().filter(s->s.startsWith("A") && s.length()==3).toList();
+    public static List<String> filterStringsStartsAwithLength3(List<String> list) {
+        return list.stream().filter(s -> s.startsWith("A") && s.length() == 3).toList();
     }
 
-    public static String intListToCommaSeparatedString(List<Integer> list){
+    public static String intListToCommaSeparatedString(List<Integer> list) {
         return list.stream()
-                .map(i->(i % 2 == 0 ? "e": "o") + i)
+                .map(i -> (i % 2 == 0 ? "e" : "o") + i)
                 .collect(Collectors.joining(", "));
     }
 

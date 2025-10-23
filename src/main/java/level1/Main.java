@@ -2,44 +2,45 @@ package level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
 
-        IO.println("Demonstrating Exercise 1:\n");
-        List<String> originalList = new ArrayList<>(Arrays.asList("Rotulador","Tungsteno","Zarzaparrila",
-                "Transfuncionador del continuo", "Ni cintieni la i","Tonto"));
+        System.out.println("Demonstrating Exercise 1:\n");
+        List<String> originalList = new ArrayList<>(Arrays.asList("Rotulador", "Tungsteno", "Zarzaparrila",
+                "Transfuncionador del continuo", "Ni cintieni la i", "Tonto"));
 
-        IO.println("Printing original List.");
-        originalList.forEach(IO::println);
-        IO.println("");
-        IO.println("Printing a list with strings that has the letter 'o':");
+        System.out.println("Printing original List.");
+        originalList.forEach(System.out::println);
+        System.out.println("");
+        System.out.println("Printing a list with strings that has the letter 'o':");
 
         List<String> filteredList;
         filteredList = MethodsWithLamba.filterStringsWithO(originalList);
-        filteredList.forEach(IO::println);
+        filteredList.forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 2:");
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 2:");
         filteredList = MethodsWithLamba.filterStringsWithOandLength5(originalList);
-        filteredList.forEach(IO::println);
+        filteredList.forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 3:");
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 3:");
 
         List<String> months = new ArrayList<>(Arrays.asList("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"));
-        months.forEach(s->IO.println(s));
+        months.forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 4:");
-        months.forEach(IO::println);
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 4:");
+        months.forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 5:");
-        FunctionalInterface fi = ()->3.1415;
-        IO.println(fi.getPiValue());
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 5:");
+        FunctionalInterface fi = () -> 3.1415;
+        System.out.println(fi.getPiValue());
 
         List<Object> list = new ArrayList<>();
         list.add("Troncoso");
@@ -49,26 +50,25 @@ public class Main {
         list.add("ASdasdsadsadsadads");
         list.add(33433.356);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 6:");
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 6:");
         List<String> sortedList = list.stream()
                 .map(Object::toString)
-                .sorted((str1, str2) -> Integer.compare(str1.length(), str2.length()))
+                .sorted(Comparator.comparingInt(String::length))
                 .toList();
-        sortedList.forEach(IO::println);
+        sortedList.forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 7:");
-        sortedList.reversed().forEach(IO::println);
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 7:");
+        sortedList.reversed().forEach(System.out::println);
 
-        IO.println("");
-        IO.println("Demonstrating Exercise 8:");
+        System.out.println("");
+        System.out.println("Demonstrating Exercise 8:");
 
         ReversedString reversedString = (input) -> new StringBuilder(input).reverse().toString();
-        IO.println(reversedString.reverseString("laMlataF"));
+        System.out.println(reversedString.reverseString("laMlataF"));
 
     }
-
 
 
 }

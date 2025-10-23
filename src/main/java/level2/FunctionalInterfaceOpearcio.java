@@ -1,4 +1,5 @@
 package level2;
+
 @FunctionalInterface
 public interface FunctionalInterfaceOpearcio {
 

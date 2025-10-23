@@ -5,6 +5,6 @@ import java.lang.FunctionalInterface;
 @FunctionalInterface
 public interface ReversedString {
 
-    public String reverseString(String string);
+    String reverseString(String string);
 
 }

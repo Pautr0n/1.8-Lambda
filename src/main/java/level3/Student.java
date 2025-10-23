@@ -2,11 +2,12 @@ package level3;
 
 class Student {
 
-    private String name, course;
-    private double grades;
-    private int age;
+    private final String name;
+    private final String course;
+    private final double grades;
+    private final int age;
 
-    public Student(String name, int age, String course, double grades){
+    public Student(String name, int age, String course, double grades) {
 
         this.name = name;
         this.age = age;
@@ -14,6 +15,7 @@ class Student {
         this.grades = grades;
 
     }
+
     public String getName() {
         return name;
     }
@@ -32,7 +34,7 @@ class Student {
 
 
     @Override
-    public String toString(){
+    public String toString() {
         return name + " - " + age + " years old - Coursing: " + course + " with a current grade of: " + grades;
     }
 
